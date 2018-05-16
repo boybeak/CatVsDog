@@ -31,6 +31,8 @@
 
 卷积神经网络图像识别基准模型VGGNet，其流程图如下：
 
+![https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png](https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png)
+
 
 
 ## 项目设计
