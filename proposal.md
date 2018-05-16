@@ -33,13 +33,16 @@
 
 ![https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png](https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png)
 
-
+从图中，我们可以看到对图片的处理过程，标准化，最大池化，完全链接，softMax激活。
 
 ## 项目设计
 
-
-
-## 报告呈现
+1. 获取训练和测试的图片，并解压到项目目录的train和test文件夹下。
+2. 图片预处理：将图片数据进行标准化处理，利用图片的文件名包含dog或者cat字符，进行one_hot编码。将预处理过的数据进行保存。避免每次都重复做预处理动作。
+3. 构建神经网络：实现卷积，最大池化，扁平化，全连接层，最后输出。
+4. 执行训练，生成模型，看准确率，对参数进行调优
+5. 执行验证，看能否对验证数据进行有效分类
+6. 若验证通过，则执行测试
 
 
 
