@@ -8,11 +8,19 @@
 
 ## 问题描述
 
-猫狗大战，该题目，即通过针对一定数量的已经加过标签的图片的训练，验证，测试，得出可靠的特征模型，再根据模型识别新的图片。期望结果为能准确的识别出新图片是猫、狗，或者二者皆不是。
+猫狗大战，该题目，即通过针对一定数量的已经加过标签的图片的训练，验证，测试，得出可靠的特征模型，再根据模型识别新的图片。期望结果为为测试集的每一张图片，识别出是狗的图片的概率。
 
 ## 数据或输入
 
-项目中，所使用的数据是来自于kaggle的图片数据：https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data，其数据形式为jpg格式的图片，分为训练用数据和测试用数据。图片文件名称已经写明是cat或者dog，可以用此作为数据中的label，以cat为0，dog为1.
+项目中，所使用的数据是来自于kaggle的图片数据：https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition/data，其数据形式为jpg格式的图片，分为训练用数据和测试用数据。训练图片文件名称已经写明是cat或者dog，其中训练图片有25000张，包含猫的图片12500, 狗的图片12500张。测试图片文件名并未写明cat或者dog，测试图片有12500张。可以看出，训练数据猫与狗的图片数量是一样的，而且猫的图片排列在前；而训练的数据并未通过文件名来告知是猫或者狗。
+
+除此之外，无论是训练图片还是测试图片，虽然都是jpg格式，但是没有一个统一的图片尺寸，好在图片之间并没有特别大的差距，宽高都保持在500像素以内；按照内容来看，多数图片中的场景，都是一只猫或者狗，有少数是有多只猫或者狗，并没有猫和狗同时出现的情况。
+
+鉴于以上情况，需要对图片做以下预处理：
+
+1. resize操作，把图片调整到一个统一的合适尺寸；
+2. 打乱训练集数据，破坏原有的猫图片都在前边，狗图片都在后边的情况；
+3. 将打乱后的数据，分为训练集和验证集。
 
 ## 解决方法描述
 
@@ -25,13 +33,15 @@
 
 ## 评估标准
 
-根据测试集得出的准确率(Accuracy)，来评估模型的有效性。
+按照kaggle中的比赛规则，需要用训练出的模型，来预测无labe的测试图片，并生成cvs文件，提交到kaggle，由kaggle来判定模型测试结果的有效性。
 
 ## 基准模型
 
 卷积神经网络图像识别基准模型VGGNet，其流程图如下：
 
-![https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png](https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png)
+![VGG_IMAGE](https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png)
+
+> 由于从Markdown生成的pdf，md文件中出现的图片引用来自github的话无法预览，所以生成pdf没有图片，请参考目录下的图片[imagenet_vgg16.png](https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png)
 
 从图中，我们可以看到对图片的处理过程，标准化，最大池化，完全链接，softMax激活。
 
@@ -45,4 +55,8 @@
 6. 若验证通过，则执行测试
 
 
+
+## 参考文献
+
+[^1]: CSDN博客-遍地流金 https://blog.csdn.net/u012177034/article/details/52252851
 
