@@ -69,5 +69,5 @@ kaggle提供的模型的评分公式为：LogLoss=−1n∑i=1n[y<sub>i</sub>log(
 
 ## 参考文献
 
-[^1]: CSDN博客-遍地流金 https://blog.csdn.net/u012177034/article/details/52252851
+**[1]** CSDN博客-遍地流金 https://blog.csdn.net/u012177034/article/details/52252851
 
