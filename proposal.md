@@ -40,7 +40,7 @@ kaggle提供的模型的评分公式为：LogLoss=−1n∑i=1n[y<sub>i</sub>log(
 其中参数含义如下：
 
 - n 测试数据大小
-- ŷ<sub>i</sub> 
+- <img src="https://github.com/boybeak/CatVsDog/blob/master/score.svg">
 
 按照kaggle中的比赛规则，需要用训练出的模型，来预测无labe的测试图片，并生成cvs文件，提交到kaggle，由kaggle来判定模型测试结果的有效性。
 
