@@ -33,7 +33,7 @@
 
 ## 评估标准
 
-kaggle提供的模型的评分公式为：LogLoss=−1n∑i=1n[y<sub>i</sub>log(ŷ <sub>i</sub>)+(1−y<sub>i</sub>)log(1−ŷ<sub>i</sub>)]
+kaggle提供的模型的评分公式为：
 
 <img src="https://github.com/boybeak/CatVsDog/blob/master/score.svg">
 
