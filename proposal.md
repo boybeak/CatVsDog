@@ -2,7 +2,7 @@
 
 ## 项目背景
 
-图像识别技术是信息时代的一门重要技术，其目的是为了让计算机替代人类入处理大量的物理信息。比如说让计算机来从人群中识别出罪犯，对癌症的准确侦测等。由于理论基础的积累已经硬件性能的大发展，在2012年后，机器学习迎来了爆发期，因此，对于通过机器学习进行图像识别，也成为了可能。**2012年，Hinton课题组为了证明深度学习的潜力，首次参加ImageNet图像识别比赛，其通过构建的CNN网络AlexNet一举夺得冠军，且碾压第二名（SVM方法）的分类性能。也正是由于该比赛，CNN吸引到了众多研究者的注意<sup>1</sup>。** 
+图像识别技术是信息时代的一门重要技术，其目的是为了让计算机替代人类入处理大量的物理信息。比如说让计算机来从人群中识别出罪犯，对癌症的准确侦测等。由于理论基础的积累已经硬件性能的大发展，在2012年后，机器学习迎来了爆发期，因此，对于通过机器学习进行图像识别，也成为了可能。**2012年，Hinton课题组为了证明深度学习的潜力，首次参加ImageNet图像识别比赛，其通过构建的CNN网络AlexNet一举夺得冠军，且碾压第二名（SVM方法）的分类性能。也正是由于该比赛，CNN吸引到了众多研究者的注意<sup>[1]</sup>。** 
 
 
 
@@ -44,7 +44,7 @@ kaggle提供的模型的评分公式为：LogLoss=−1n∑i=1n[y<sub>i</sub>log(
 - <img src="https://github.com/boybeak/CatVsDog/blob/master/yi.svg"> 第i张图片若为狗则值为1，否则为0
 - <img src="https://github.com/boybeak/CatVsDog/blob/master/log.svg"> 自然对数函数
 
-按照kaggle中的比赛规则，需要用训练出的模型，来预测无labe的测试图片，并生成cvs文件，提交到kaggle，由kaggle来判定模型测试结果的有效性。
+在验证集上通过此函数，得出模型评估分数，该分数 约小越好。当模型分数足够优秀，则可以在测试集上使用此模型，生成评估概率的csv文件，提交给kaggle。
 
 ## 基准模型
 
@@ -52,11 +52,9 @@ kaggle提供的模型的评分公式为：LogLoss=−1n∑i=1n[y<sub>i</sub>log(
 
 ![VGG_IMAGE](https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png)
 
-> 由于从Markdown生成的pdf，md文件中出现的图片引用来自github的话无法预览，所以生成pdf没有图片，请参考目录下的图片[imagenet_vgg16.png](https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png)
-
 从图中，我们可以看到对图片的处理过程，标准化，最大池化，完全链接，softMax激活。
 
-特别注意的是，在构建keras中的VGG16网络时候，需要特别指定一个参数classes为2。
+特别注意的是，在构建keras中的VGG16网络时候，需要特别指定一个参数classes为1。
 
 ## 项目设计
 
