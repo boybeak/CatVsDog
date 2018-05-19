@@ -2,7 +2,7 @@
 
 ## 项目背景
 
-图像识别技术是信息时代的一门重要技术，其目的是为了让计算机替代人类入处理大量的物理信息。比如说让计算机来从人群中识别出罪犯，对癌症的准确侦测等。由于理论基础的积累已经硬件性能的大发展，在2012年后，机器学习迎来了爆发期，因此，对于通过机器学习进行图像识别，也成为了可能。**2012年，Hinton课题组为了证明深度学习的潜力，首次参加ImageNet图像识别比赛，其通过构建的CNN网络AlexNet一举夺得冠军，且碾压第二名（SVM方法）的分类性能。也正是由于该比赛，CNN吸引到了众多研究者的注意<sup>[1]</sup>。** 
+图像识别技术是信息时代的一门重要技术，其目的是为了让计算机替代人类入处理大量的物理信息。比如说让计算机来从人群中识别出罪犯，对癌症的准确侦测等。由于理论基础的积累已经硬件性能的大发展，在2012年后，机器学习迎来了爆发期，因此，对于通过机器学习进行图像识别，也成为了可能。2012年，Hinton课题组为了证明深度学习的潜力，首次参加ImageNet<sup>[1]</sup>图像识别比赛，其通过构建的CNN网络AlexNet一举夺得冠军，且碾压第二名（SVM方法）的分类性能。也正是由于该比赛，CNN吸引到了众多研究者的注意。 
 
 
 
@@ -48,7 +48,7 @@ kaggle提供的模型的评分公式为：
 
 ## 基准模型
 
-卷积神经网络图像识别基准模型VGGNet，其流程图如下：
+卷积神经网络图像识别基准模型VGGNet<sup>[2]</sup>，其流程图如下：
 
 ![VGG_IMAGE](https://github.com/boybeak/CatVsDog/blob/master/imagenet_vgg16.png)
 
@@ -69,5 +69,5 @@ kaggle提供的模型的评分公式为：
 
 ## 参考文献
 
-**[1]** CSDN博客-遍地流金 https://blog.csdn.net/u012177034/article/details/52252851
+[1]: http://vision.stanford.edu/teaching/cs231b_spring1415/slides/alexnet_tugce_kyunghee.pdf	"Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton. ImageNet Classification with Deep"
 
