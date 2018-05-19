@@ -54,7 +54,7 @@ kaggle提供的模型的评分公式为：
 
 从图中，我们可以看到对图片的处理过程，标准化，最大池化，完全链接，softMax激活。
 
-特别注意的是，在构建keras中的VGG16网络时候，需要特别指定一个参数classes为1。
+特别注意的是，这里的激活函数不能继续使用softmax，因为本题目只需要图片为狗的概率，所以，softMax要替换为sigmoid函数。
 
 ## 项目设计
 
@@ -69,7 +69,7 @@ kaggle提供的模型的评分公式为：
 
 ## 参考文献
 
-jjlj
+[1] Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton. ImageNet Classification with Deep 05/18/2015
 
-[1]: http://vision.stanford.edu/teaching/cs231b_spring1415/slides/alexnet_tugce_kyunghee.pdf	"Alex Krizhevsky, Ilya Sutskever, Geoffrey E. Hinton. ImageNet Classification with Deep 05/18/2015"
+[2] What is the VGG neural network: https://www.quora.com/What-is-the-VGG-neural-network. Published: 2018/03/01
 
