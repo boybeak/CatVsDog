@@ -4,7 +4,7 @@
 # test/
 train.zip
 test.zip
-
+weights.h5
 
 __pycache__/
 *.py[cod]
