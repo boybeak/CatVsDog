@@ -5,3 +5,6 @@
 Python代码请查看[project_b.ipynb](https://github.com/boybeak/CatVsDog/blob/master/project_b.ipynb)文件，另外[helper.py](https://github.com/boybeak/CatVsDog/blob/master/helper.py)文件是一个辅助类。
 
 项目大概持续了1个多月，花的时间比较长
+
+代码运行成功截图如下：
+
