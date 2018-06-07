@@ -8,3 +8,8 @@ Python代码请查看[project_b.ipynb](https://github.com/boybeak/CatVsDog/blob/
 
 代码运行成功截图如下：
 
+![success](https://github.com/boybeak/CatVsDog/blob/master/images/run_success.jpg)
+
+kaggle 分数截图
+
+![score](https://github.com/boybeak/CatVsDog/blob/master/images/score_cap.jpg)
