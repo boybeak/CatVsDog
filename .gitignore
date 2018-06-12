@@ -1,7 +1,7 @@
 # Byte-compiled / optimized / DLL files
 
-# train/
-# test/
+train/
+test/
 train.zip
 test.zip
 weights.h5
