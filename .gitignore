@@ -2,9 +2,11 @@
 
 train/
 test/
+remote_sub_train/
 train.zip
 test.zip
 weights.h5
+*.h5
 
 __pycache__/
 *.py[cod]
