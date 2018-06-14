@@ -3,6 +3,7 @@
 best_point.h5
 train/
 test/
+valid_files
 remote_sub_train/
 train.zip
 test.zip
