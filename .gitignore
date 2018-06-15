@@ -1,7 +1,7 @@
 # Byte-compiled / optimized / DLL files
 
 *.npy
-best_point.h5
+*.h5
 train/
 test/
 valid_files
